@@ -3,7 +3,7 @@
 #define ROWS 3
 #define COLS 5
 
-void move(int arr[ROWS][COLS], int k) 
+void move(int arr[ROWS][COLS], int k)                //移动数组的列
 {
     int temp[ROWS][COLS];
 
@@ -11,7 +11,7 @@ void move(int arr[ROWS][COLS], int k)
     {
         for (int j = 0; j < COLS; j++)
          {
-            temp[i][j] = arr[i][(j + k) % COLS];
+            temp[i][j] = arr[i][(j + k) % COLS];   //用取模的办法达到循环的效果
         }
     }
 
@@ -19,7 +19,7 @@ void move(int arr[ROWS][COLS], int k)
      {
         for (int j = 0; j < COLS; j++) 
         {
-            arr[i][j] = temp[i][j];
+            arr[i][j] = temp[i][j];                 //改变后的数组存回去
         }
     }
 }
@@ -68,7 +68,7 @@ int main()
     }
     else{
 
-        printf("error!");
+        printf("error!\n");
         return -1;
     }
 
